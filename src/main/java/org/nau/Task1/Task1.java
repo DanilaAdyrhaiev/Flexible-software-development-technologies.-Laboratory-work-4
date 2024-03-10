@@ -45,8 +45,8 @@ public class Task1 {
         System.out.println("Введіть ім'я власника:");
         String ownerName = scanner.nextLine();
 
-        Animal animal = animalService.createAnimal(name, age, kind, ownerName);
-        System.out.println("Тварину успішно додано: " + animal);
+        animalService.createAnimal(name, age, kind, ownerName);
+        System.out.println("Тварину успішно додано");
     }
 
     private static void displayAnimals() {
@@ -55,7 +55,7 @@ public class Task1 {
         } else {
             System.out.println("Список тварин:");
             for (Animal animal : animalService.animalList) {
-                System.out.println(animal);
+                System.out.println(animal.toString());
             }
         }
     }
